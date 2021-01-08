@@ -64,7 +64,7 @@ public class Controller extends HttpServlet {
 			} else {
 				//no와 password 불일치
 				request.setAttribute("no", no);
-				RequestDispatcher rd = request.getRequestDispatcher("./deletefailpage.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("./WEB-INF/deletefailpage.jsp");
 				rd.forward(request, response);
 			}
 
@@ -73,7 +73,7 @@ public class Controller extends HttpServlet {
 			int no = Integer.parseInt(request.getParameter("no"));
 
 			request.setAttribute("no", no);
-			RequestDispatcher rd = request.getRequestDispatcher("./writeform.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("./WEB-INF/writeform.jsp");
 			rd.forward(request, response);
 		}
 
@@ -81,7 +81,8 @@ public class Controller extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		request.setCharacterEncoding("UTF-8");
+		doGet(request,response);
 	}
 
 }

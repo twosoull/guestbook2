@@ -13,7 +13,7 @@
 </head>
 <body>
 	
-	<form action = "/guestbook2/gbc">
+	<form action = "/guestbook2/gbc" method="post">
 		비밀번호:<input type="password" name = "password">
 		<input type = "hidden" name = "no" value = "<%=no %>">
 		<input type = "hidden" name = "action" value = "delete">
